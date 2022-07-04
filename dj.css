@@ -1,0 +1,45 @@
+:root {
+  --woof: #330330;
+}
+
+::selection {
+  background: plum;
+  color: indigo;
+}
+
+:not(:active) {
+  opacity: 0.909;
+  transition: opacity 33ms ease-in-out;
+}
+
+:focus,
+:active {
+  opacity: 1;
+}
+
+:any-link {
+  color: thistle;
+  transition-property: opacity color background;
+}
+
+html {
+  background: indigo;
+  color: plum;
+  transition: 30ms;
+}
+
+mark {
+  background: magenta;
+  color: var(--woof);
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    background: var(--woof);
+    color: thistle;
+  }
+
+  :any-link {
+    color: lavender;
+  }
+}
